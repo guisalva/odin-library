@@ -49,3 +49,15 @@ addBookToLibrary("Harry Potter", "J.K Rolling");
 addBookToLibrary("Harry Potter 2", "J.K Rolling");
 addBookToLibrary("Harry Potter 3", "J.K Rolling");
 addBookToLibrary("Harry Potter 4", "J.K Rolling");
+addBookToLibrary("Harry Potter 4", "J.K Rolling");
+addBookToLibrary("Harry Potter 4", "J.K Rolling");
+
+const dialog = document.getElementById("book-dialog");
+
+document.getElementById("open-dialog").addEventListener("click", () => {
+  dialog.showModal();
+});
+
+document.getElementById("cancel-btn").addEventListener("click", () => {
+  dialog.close();
+});

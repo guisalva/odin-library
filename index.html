@@ -3,6 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <title>Odin Library</title>
 
     <link rel="stylesheet" href="src/styles/reset.css" />
@@ -10,10 +16,42 @@
   </head>
   <body>
     <main>
-      <button command="show-modal" commandfor="my-dialog">Open dialog</button>
+      <div class="header">
+        <h1>Odin Library</h1>
+
+        <button id="open-dialog">Add book</button>
+      </div>
 
       <div class="books-display"></div>
     </main>
+
+    <dialog id="book-dialog">
+      <form id="book-form" method="dialog">
+        <h2>New book</h2>
+
+        <fieldset>
+          <label>
+            Name
+            <input type="text" name="name" required />
+          </label>
+
+          <label>
+            Author
+            <input type="text" name="author" required />
+          </label>
+
+          <label>
+            Pages
+            <input type="number" name="pages" required />
+          </label>
+        </fieldset>
+
+        <menu>
+          <button type="button" id="cancel-btn" class="danger">Cancel</button>
+          <button type="submit" class="success">Save</button>
+        </menu>
+      </form>
+    </dialog>
 
     <script src="src/scripts/index.js" defer></script>
   </body>

@@ -1,3 +1,134 @@
-* {
-  color: red;
+/* GENERAL */
+body {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+}
+
+main {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-block: 20px 30px;
+
+  & > h1 {
+    font-size: 2rem;
+    text-transform: uppercase;
+  }
+
+  & > button {
+    border: 2px solid #00a2ff;
+    border-radius: 8px;
+    color: #00a2ff;
+    font-size: 0.925rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 5px 20px;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: #00a2ff;
+      color: #fff;
+    }
+  }
+}
+
+.books-display {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.book-card {
+  background-color: #fafafa;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  & > h3 {
+    font-size: 1.125rem;
+  }
+
+  & > ul {
+    & > li {
+      font-size: 0.85rem;
+    }
+  }
+}
+
+/* DIALOG */
+#book-dialog {
+  max-width: 700px;
+  width: 100%;
+  border: 2px solid #808080;
+  border-radius: 8px;
+  margin: auto;
+  padding: 25px;
+}
+
+#book-form {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  & > h2 {
+    font-size: 1.25rem;
+  }
+
+  & > fieldset {
+    border: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  & label {
+    display: grid;
+    text-transform: uppercase;
+    font-size: 0.575rem;
+    font-weight: 700;
+    color: #606060;
+  }
+
+  & input {
+    font-size: 0.925rem;
+    padding: 6px 12px;
+    margin-top: 4px;
+    border: 1px solid #909090;
+    border-radius: 6px;
+
+    &:focus {
+      border-color: #00a2ff;
+    }
+
+    &:user-invalid {
+      border-color: #ff3300;
+    }
+  }
+
+  & menu {
+    display: flex;
+    gap: 20px;
+
+    & > button {
+      padding: 8px 16px;
+      border-radius: 6px;
+      color: #fff;
+
+      &.success {
+        background-color: #1e961e;
+      }
+      &.danger {
+        background-color: #ff3300;
+      }
+    }
+  }
 }
