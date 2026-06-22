@@ -54,8 +54,13 @@ function renderBookCards() {
     });
 
     bookActions.classList.toggle("book-actions");
-    bookActions.innerHTML = `<button type="button" data-action="delete" class="delete-btn"><img src="../src/assets/trash.svg" /><button> 
-    <button type="button" data-action="toggle-read" class="btn"><img src="../src/assets/book-open-check.svg" /><button>`;
+    bookActions.innerHTML = `
+    <button type="button" data-action="delete" class="delete-btn">
+      <img src="./assets/trash.svg" alt="delete-icon" />
+    <button> 
+    <button type="button" data-action="toggle-read" class="btn">
+      <img src="../src/assets/book-open-check.svg" alt="toggle-read-icon" />
+    <button>`;
 
     bookCard.classList.toggle("book-card");
     bookCard.setAttribute("data-id", book.id);
