@@ -4,16 +4,14 @@ const booksDisplay = document.querySelector(".books-display");
 const dialog = document.getElementById("book-dialog");
 const bookForm = document.getElementById("book-form");
 
-function Book(name, author, pages, read) {
-  if (!new.target) {
-    throw Error("You may use 'new' operator to call the constructor");
+class Book {
+  constructor(name, author, pages, read) {
+    this.id = crypto.randomUUID();
+    this.name = name;
+    this.author = author;
+    this.pages = pages;
+    this.read = read;
   }
-
-  this.id = crypto.randomUUID();
-  this.name = name;
-  this.author = author;
-  this.pages = pages;
-  this.read = read;
 }
 
 function addBookToLibrary(name, author, pages, read) {
